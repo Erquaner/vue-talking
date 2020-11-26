@@ -16,8 +16,8 @@ exports.config = {
   ],
   // Patterns to exclude.
   exclude: [
-      // 'test/spec/multibrowser/**',
-      // 'test/spec/mobile/**'
+    // 'test/spec/multibrowser/**',
+    // 'test/spec/mobile/**'
   ],
   //
   // ===================
