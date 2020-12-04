@@ -22,7 +22,7 @@ protocol.registerSchemesAsPrivileged([{
 }])
 
 // 设置菜单栏
-function createMenu() {
+function createMenu () {
   // darwin表示macOS，针对macOS的设置
   if (process.platform === 'darwin') {
     const template = [
@@ -36,7 +36,7 @@ function createMenu() {
             role: 'quit'
           }]
       }]
-    let menu = Menu.buildFromTemplate(template as any)
+    const menu = Menu.buildFromTemplate(template)
     Menu.setApplicationMenu(menu)
   } else {
     // windows及linux系统
@@ -44,8 +44,7 @@ function createMenu() {
   }
 }
 
-
-function createWindow() {
+function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({
     width: 800,
@@ -118,4 +117,3 @@ if (isDevelopment) {
     })
   }
 }
-

@@ -1,4 +1,4 @@
-const { config } = require('./wdio.shared.conf.ts')
+const { config } = require('./wdio.shared.conf.js')
 
 exports.config = {
   /**
