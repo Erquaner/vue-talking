@@ -52,7 +52,9 @@ function createWindow() {
     height: 600,
     webPreferences: {
       nodeIntegration: true
-    }
+    },
+    // eslint-disable-next-line no-undef
+    icon: './public/app.ico'
   })
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {

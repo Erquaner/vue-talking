@@ -20,10 +20,22 @@ module.exports = {
   },
   pluginOptions: {
     electronBuilder: {
-      win: {
-        icon: './public/app.ico'
-      },
-      mac: { icon: './public/app.png' }
+      builderOptions: {
+        win: {
+          "icon": "./public/app.ico", //图标，当前图标在根目录下，注意这里有两个坑
+          "target": [
+            {
+              "target": "nsis", //利用nsis制作安装程序
+              "arch": [
+                "x64", //64位
+                "ia32" //32位
+              ]
+            }
+          ]
+        },
+        mac: { icon: './public/app.png' },
+        productName: 'VTalking'
+      }
     }
   }
 };
